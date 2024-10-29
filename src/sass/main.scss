@@ -1,0 +1,25 @@
+// base
+@import './base/vars';
+@import './base/reset';
+@import './base/base';
+
+// mixins
+@import './mixins/mixins';
+
+// sections
+@import './sections/header';
+@import './sections/enjoy';
+@import './sections/favourites-coffee';
+@import './sections/about';
+@import './sections/mobile-app';
+@import './sections/footer';
+@import './sections/menu-food';
+
+// blocks
+@import './blocks/logo';
+@import './blocks/link-menu-btn';
+@import './blocks/section-title';
+@import './blocks/slider';
+@import './blocks/burger';
+@import './blocks/modal';
+

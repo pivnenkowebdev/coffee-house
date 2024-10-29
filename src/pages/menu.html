@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Coffee House | Menu</title>
+   <!-- fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Manrope:wght@400;700&display=swap" rel="stylesheet">
+   <!-- inter italic -->
+   <link href="https://fonts.cdnfonts.com/css/inter?styles=29141" rel="stylesheet">
+   <!-- favicon -->
+   <link rel="shortcut icon" href="../img/favicon/favicon.png" type="image/x-icon">
+</head>
+   <!-- fade -->
+   <div class="fade"></div>
+   <!-- header -->
+   <header class="header">
+      <div class="container">
+         <div class="header__content">
+             <nav class="menu">
+               <a href="./index.html" class="logo">
+                     <img src="../img/logo/logo.png" alt="logo coffee-house">
+               </a>
+               <div class="menu__actions" id="mobileMenu">
+                  <ul class="menu__list">
+                     <li class="menu__item">
+                        <a class="menu__link-anchor mobiles-anchors" href="index.html#favorite">favorite coffee</a>
+                     </li>
+                     <li class="menu__item">
+                        <a class="menu__link-anchor mobiles-anchors" href="index.html#about">about</a>
+                     </li>
+                     <li class="menu__item">
+                        <a class="menu__link-anchor mobiles-anchors" href="index.html#mobileApp">mobile app</a>
+                     </li>
+                     <li class="menu__item">
+                        <a class="menu__link-anchor mobiles-anchors" href="#footer">contact us</a>
+                     </li>
+                  </ul>
+                  <a href="#" class="menu__menu-page mobiles-anchors active">
+                     <span>menu</span>
+                  </a>
+               </div>
+               <button class="burger" id="burgerBtn">
+                  <span class="burger__line"></span>
+                  <span class="burger__line"></span>
+               </button>
+            </nav>
+         </div>
+      </div>
+   </header>
+   <!-- main -->
+   <main>
+      <section class="menu-food">
+        <div class="container">
+         <!-- modal -->
+         <div class="menu-food__content">
+               <h1 class="section-title">Behind each of our cups hides an
+                  <span class="section-title__italic">amazing surprise</span>
+               </h1>
+               <ul class="choice-list">
+                  <li class="choice-list__item">
+                     <label class="btn-choice active" data-action="coffee">
+                        <input type="radio" name="menu-section" id="btnCoffee" class="btn-choice__real visually-hidden">
+                        <span class="btn-choice__value btn-choice__value--coffee">
+                           Coffee
+                        </span>
+                     </label>
+                  </li>
+                  <li class="choice-list__item">
+                     <label class="btn-choice" data-action="tea">
+                        <input type="radio" name="menu-section" id="btnTea" class="btn-choice__real visually-hidden">
+                        <span class="btn-choice__value btn-choice__value--kettler">
+                           Tea
+                        </span>
+                     </label>
+                  </li>
+                  <li class="choice-list__item">
+                     <label class="btn-choice" data-action="dessert">
+                        <input type="radio" name="menu-section" id="btnDessert" class="btn-choice__real visually-hidden">
+                        <span class="btn-choice__value btn-choice__value--cake">
+                           Dessert
+                        </span>
+                     </label>
+                  </li>
+               </ul>
+               <ul class="list-products" id="listProducts"></ul>
+               <button class="btn-refrash">
+                  <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <rect x="0.5" y="0.5" width="59" height="59" rx="29.5" stroke="#665F55"/>
+                     <path d="M39.8883 31.5C39.1645 36.3113 35.013 40 30 40C24.4772 40 20 35.5228 20 30C20 24.4772 24.4772 20 30 20C34.1006 20 37.6248 22.4682 39.1679 26" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round"/>
+                     <path d="M35 26H39.4C39.7314 26 40 25.7314 40 25.4V21" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round"/>
+                     </svg>
+                     
+               </button>
+           </div>
+         </div>
+      </section>
+   </main>
+   <footer class="footer" id="footer">
+      <div class="container">
+         <div class="footer__content">
+            <div class="social">
+               <h2 class="section-title">Sip, Savor, Smile. <span class="section-title__italic">It’s coffee time!</span></h2>
+               <ul class="social-list">
+                  <li class="social-list__item">
+                     <a href="#!" class="social-link">
+                        <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                           <rect x="0.5" y="0.5" width="59" height="59" rx="29.5"/>
+                           <path d="M41 21.0101C41 21.0101 38.9821 22.2022 37.86 22.5401C37.2577 21.8476 36.4573 21.3567 35.567 21.134C34.6767 20.9112 33.7395 20.9673 32.8821 21.2945C32.0247 21.6218 31.2884 22.2045 30.773 22.9638C30.2575 23.7231 29.9877 24.6224 30 25.5401V26.5401C28.2426 26.5856 26.5013 26.1959 24.931 25.4055C23.3607 24.6151 22.0103 23.4487 21 22.0101C21 22.0101 17 31.0101 26 35.0101C23.9405 36.408 21.4872 37.109 19 37.0101C28 42.0101 39 37.0101 39 25.5101C38.9991 25.2315 38.9723 24.9537 38.92 24.6801C39.9406 23.6735 41 21.0101 41 21.0101Z" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                     </a>
+                  </li>
+                  <li class="social-list__item">
+                     <a href="#!" class="social-link">
+                        <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                           <rect x="0.5" y="0.5" width="59" height="59" rx="29.5"/>
+                           <path d="M30 34C32.2091 34 34 32.2091 34 30C34 27.7909 32.2091 26 30 26C27.7909 26 26 27.7909 26 30C26 32.2091 27.7909 34 30 34Z" stroke-linecap="round" stroke-linejoin="round"/>
+                           <path d="M21 34V26C21 23.2386 23.2386 21 26 21H34C36.7614 21 39 23.2386 39 26V34C39 36.7614 36.7614 39 34 39H26C23.2386 39 21 36.7614 21 34Z"/>
+                           <path d="M35.5 24.51L35.51 24.4989" stroke-linecap="round" stroke-linejoin="round"/>
+                           </svg>
+                     </a>
+                  </li>
+                  <li class="social-list__item">
+                     <a href="#!" class="social-link">
+                        <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                           <rect x="0.5" y="0.5" width="59" height="59" rx="29.5"/>
+                           <path d="M35 20H32C30.6739 20 29.4021 20.5268 28.4645 21.4645C27.5268 22.4021 27 23.6739 27 25V28H24V32H27V40H31V32H34L35 28H31V25C31 24.7348 31.1054 24.4804 31.2929 24.2929C31.4804 24.1054 31.7348 24 32 24H35V20Z" stroke-linecap="round" stroke-linejoin="round"/>
+                           </svg>
+                     </a>
+                  </li>
+               </ul>
+            </div>
+            <div class="contacts">
+               <p class="contacts__title">Contact us</p>
+               <ul class="contacts-list">
+                  <li class="contacts-list__item">
+                     <a class="contact-link" href="https://www.google.ge/maps/place/Statue+of+Liberty/@40.6892534,-74.0470753,17z/data=!3m1!4b1!4m6!3m5!1s0x89c25090129c363d:0x40c6a5770d25022b!8m2!3d40.6892494!4d-74.0445004!16zL20vMDcycDg?entry=ttu" target="_blank">
+                        <span class="contact-link__icon">
+                           <img src="../img/icons/point-map.svg" alt="map icon">
+                        </span>
+                        <span class="contact-link__text">8558 Green Rd., LA</span>
+                     </a>
+                  </li>
+                  <li class="contacts-list__item">
+                     <a class="contact-link" href="tel:+16035550123" >
+                        <span class="contact-link__icon">
+                           <img src="../img/icons/phone.svg" alt="phone icon">
+                        </span>
+                        <span class="contact-link__text">+1 (603) 555-0123</span>
+                     </a>
+                  </li>
+                  <li class="contacts-list__item">
+                     <span class="contact-link">
+                        <span class="contact-link__icon">
+                           <img src="../img/icons/clock.svg" alt="clock icon">
+                        </span>
+                        <span class="contact-link__text">Mon-Sat: 9:00 AM – 23:00 PM</span>
+                     </span>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </footer>
+</body>
+</html>
+
+
+

@@ -1,0 +1,138 @@
+// линия ссылок
+@mixin under-line($bg) {
+   content: '';
+   position: absolute;
+   bottom: -3px;
+   left: 50%;
+   transform: translate(-50%);
+   display: inline-block;
+   width: 0;
+   height: 2px;
+   background-color: $bg;
+   opacity: 0;
+   transition: width 0.5s, opacity 0.5s;
+}
+
+// hover / active кнопок в меню
+@mixin btn-menu-dark {
+   background-color: $containerBg;
+   border-color: $darkBorder;
+   
+   .btn-choice__value {
+      color: $lightText;
+   }
+
+   .btn-choice__value:before {
+      background-color: $bodyBg;
+   }
+}
+
+@mixin btn-menu($mr, $pt, $pb) {
+
+      flex-shrink: 0;
+
+   & {
+      display: inline-block;
+      padding: $pt 16px $pb 8px;
+      border: 1px solid $lightBorder;
+      border-radius: 100px;
+      transition: background-color 0.5s, border-color 0.5s;
+      
+      &__value {
+         font-family: Inter;
+         font-size: 16px;
+         font-weight: 600;
+         line-height: 1.5;
+         transition: color 0.5s;
+         pointer-events: none;
+         
+         &::before {
+            content: '';
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            pointer-events: none;
+            margin-right: $mr;
+            border-radius: 50%;
+            vertical-align: middle;
+            background-color: $lightBorder;
+            background-size: 70%;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: background-color 0.5s;
+         }
+         
+         &--coffee::before {
+            background-image: url(../img/icons/coffee-btn.png);
+         }
+         
+         &--kettler::before {
+            background-image: url(../img/icons/kettler-btn.png);
+         }
+         
+         &--cake::before {
+            background-image: url(../img/icons/cake-btn.png);
+         }
+
+         &--size-s::before {
+            background-image: url(../img/icons/s-size.svg);
+            background-size: 30%;
+         }
+
+         &--size-m::before {
+            background-image: url(../img/icons/m-size.svg);
+            background-size: 50%;
+         }
+
+         &--size-l::before {
+            background-image: url(../img/icons/l-size.svg);
+            background-size: 30%;
+         }
+
+         &--mode-1::before {
+            background-image: url(../img/icons/1-mode.svg);
+            background-size: 20%;
+         }
+
+         &--mode-2::before {
+            background-image: url(../img/icons/2-mode.svg);
+            background-size: 35%;
+         }
+
+         &--mode-3::before {
+            background-image: url(../img/icons/3-mode.svg);
+            background-size: 30%;
+         }
+
+
+
+      }
+
+   }
+
+   &.active {
+      @include btn-menu-dark;
+      cursor:default;
+   }
+
+   @media(hover:hover) {
+
+      &:hover {
+         @include btn-menu-dark;
+      }
+
+      &__mode.active:hover {
+         background-color: $bodyBg;
+         border-color: $lightBorder;
+         cursor: pointer;
+   
+         .btn-choice__value {
+            color: $darkText;
+         }
+
+         .btn-choice__value:before {
+            background-color: $lightBorder;
+         }
+      }
+   }
+}

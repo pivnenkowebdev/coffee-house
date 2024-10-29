@@ -1,0 +1,128 @@
+.menu-food {
+
+   &__content {
+      
+      @media (max-width: 768px) {
+         padding-bottom: 100px;
+      }
+   }
+
+   .section-title {
+      max-width: 800px;
+      text-align: center;
+      margin: 0 auto 40px;
+   }
+
+   .choice-list {
+      display: flex;
+      column-gap: 16px;
+      justify-content: center;
+
+      @media (max-width: 525px) {
+         column-gap: 6px;
+      }
+   }
+
+   .btn-choice {
+
+      @include btn-menu(5px, 8px, 8px);
+
+   }
+
+}
+   // list products
+   .list-products {
+      display: flex;
+      align-items: stretch;
+      gap: 40px;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px 0 100px;
+
+      @media (max-width: 768px) {
+         padding: 40px 0 40px;
+      }
+   }
+
+   .card-product {
+      height: 100%;
+      max-width: 310px;
+      border: 1px solid $lightBorder;
+      border-radius: 40px;
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 auto;
+
+      @media(hover:hover) {
+         &:hover {
+            cursor: pointer;
+
+            img {
+               transform: scale(1);
+            }
+         }
+      }
+   }
+   
+   .card-product__holder-img {
+      max-width: 310px;
+      min-height: 310px;
+      background-color: $darkBorder;
+      border-radius: inherit;
+      overflow: hidden;
+
+      img {
+         transition: transform 0.5s;
+         transform: scale(1.1);
+      }
+   }
+   
+   .card-product__info {
+      padding: 20px;
+      display: flex;
+      min-height: 10px;
+      flex-direction: column;
+      text-align: left;
+      flex: 1 1 auto;
+   }
+
+   .card-product__title {
+      margin-bottom: 12px;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1.25;
+   }
+   
+   .card-product__description {
+      flex: 1 1 auto;
+      margin-bottom: 12px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.5;
+
+      @media (max-width: 768px) {
+         min-height: 70px;
+      }
+   }
+   
+   .card-product__price {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1.25;
+      color: $darkText;
+   }
+
+   .card-product__currency-symbol {
+
+   }
+
+   .card-product__sum {
+
+   }
+
+.btn-refrash {
+
+   display: none;
+   margin: 0 auto;
+   
+}

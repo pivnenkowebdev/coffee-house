@@ -1,0 +1,16 @@
+.section-title {
+   margin-bottom: 40px;
+   font-size: 60px;
+   font-weight: 600;
+   line-height: 1.25;
+   color: $darkText;
+
+      &__italic{
+         color: $accentColor;
+         font-style: italic;
+      }
+
+   @media (max-width: 767px) {
+      font-size: 32px;
+   }
+}

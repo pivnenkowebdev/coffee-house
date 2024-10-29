@@ -1,0 +1,127 @@
+.header{
+
+   &__content{
+      padding: 20px 0;
+   }
+
+   .menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   
+      &__list {
+         display: flex;
+         column-gap: 40px;
+
+         @media (max-width: 768px) {
+            flex-direction: column;
+            row-gap: 60px;
+            margin-bottom: 100px;
+         }
+      }
+   
+      &__link-anchor,
+      &__menu-page{
+         position: relative;
+         display: inline-block;
+         font-size: 16px;
+         font-weight: 600;
+         line-height: 1.5;
+         color: $darkText;
+   
+            &::first-letter{
+               text-transform: uppercase;
+            }
+
+            @media (max-width: 768px) {
+               font-size: 32px;
+               line-height: 1.25;
+            }
+   
+      }
+   
+      &__link-anchor {
+   
+         &::before {
+            @include under-line($darkText);
+         }
+
+         @media (hover:hover) {
+             &:hover::before {
+            width: 100%;
+            opacity: 1;
+            }
+         }
+      }
+   
+      &__menu-page {
+
+         &::after{
+            content: '';
+            margin-left: 8px;
+            vertical-align: text-bottom;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-image: url('../img/icons/coffee-cup.svg');
+
+            @media (max-width: 768px) {
+               width: 40px;
+               height: 40px;
+               margin-left: 16px;
+               background-size: cover;
+               background-repeat: no-repeat;
+               background-image: url('../img/icons/coffee-cup-mobile.svg');
+            }
+         }
+   
+         &::before {
+            @include under-line($darkText);
+         }
+      
+         &.active {
+            cursor: default;
+         }
+         
+         @media(hover:hover) {
+            &:hover::before {
+               width: 100%;
+               opacity: 1;
+            }
+         }
+
+         &.active::before {
+            width: 100%;
+            opacity: 1;
+         }
+      }
+
+      .menu__actions {
+         display: flex;
+         justify-content: space-between;
+         column-gap: 40px;
+         min-width: 66%;
+
+         @media (max-width: 768px) {
+            padding-top: 160px;
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            right: -100%;
+            top: 0;
+            z-index: 2;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            background-color: $bodyBg;
+            text-align: center;
+            transition: right 0.5s ease-in;
+
+            &.open{
+               right: 0;
+            }
+         }
+      }
+
+   }
+}
